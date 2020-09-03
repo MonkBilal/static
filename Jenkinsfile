@@ -15,7 +15,7 @@ pipeline {
 				}
 			}
 		}
-		stage('Site Up check'){
+		stage('Site Up Status check'){
 			steps {
                		script {
                     		final String url = "http://jenkins9582.s3-website.ap-south-1.amazonaws.com/"
