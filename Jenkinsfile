@@ -23,9 +23,10 @@ pipeline {
                     		final String response = sh(script: "curl -I $url|grep 'HTTP/1.1 200'", returnStdout: true).trim()
 
                     		echo response
-                	}
+                		}
 
 			
+			}
 		}
 	}
 }
