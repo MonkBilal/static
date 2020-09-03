@@ -15,5 +15,17 @@ pipeline {
 				}
 			}
 		}
+		stage('Site Up check'){
+			steps {
+               		script {
+                    		final String url = "http://jenkins9582.s3-website.ap-south-1.amazonaws.com/"
+
+                    		final String response = sh(script: "curl -I $url|grep 'HTTP/1.1 200'", returnStdout: true).trim()
+
+                    		echo response
+                	}
+
+			
+		}
 	}
 }
